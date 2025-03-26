@@ -1,0 +1,199 @@
+/* App.css */
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.App-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.App-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.App-header p {
+  color: #666;
+  margin: 0;
+}
+
+.App-main {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form {
+  margin-bottom: 2rem;
+}
+
+.file-input-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.file-input-label {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.file-input-label:hover {
+  border-color: #999;
+}
+
+.file-input {
+  position: absolute;
+  left: -9999px;
+}
+
+.analyze-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.analyze-button:hover {
+  background-color: #3367d6;
+}
+
+.analyze-button:disabled {
+  background-color: #a1bff0;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d93025;
+  margin-top: 0.5rem;
+}
+
+.results-container {
+  margin-top: 2rem;
+}
+
+.results-container h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.score-display {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f1f8ff;
+  border: 10px solid #4285f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.score-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4285f4;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.breakdown-section, .recommendations-section {
+  margin-bottom: 2rem;
+}
+
+.breakdown-section h3, .recommendations-section h3 {
+  color: #555;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.score-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.score-category {
+  margin-bottom: 1rem;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.category-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.category-score {
+  color: #666;
+}
+
+.progress-bar-container {
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.5s ease-out;
+}
+
+.recommendations-list {
+  padding-left: 1.5rem;
+}
+
+.recommendation-item {
+  margin-bottom: 0.75rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .App-main {
+    padding: 1.5rem;
+  }
+  
+  .file-input-container {
+    flex-direction: column;
+  }
+  
+  .score-categories {
+    grid-template-columns: 1fr;
+  }
+}
